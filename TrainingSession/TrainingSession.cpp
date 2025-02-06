@@ -2,11 +2,14 @@
 //
 
 #include "TrainingSession.h"
+#include <torch/torch.h>
 
 using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+	auto x =torch::tensor ({ 2,3 });
+
+	std::cout << "Hello CMake." << x << std::endl;
 	return 0;
 }
