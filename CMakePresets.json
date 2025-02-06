@@ -7,10 +7,11 @@
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "installDir": "${sourceDir}/out/install/${presetName}",
-            "cacheVariables": {
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe"
-            },
+          "cacheVariables": {
+            "CMAKE_C_COMPILER": "cl.exe",
+            "CMAKE_CXX_COMPILER": "cl.exe",
+            "CMAKE_TOOLCHAIN_FILE": "C:/libs/vcpkg/scripts/buildsystems/vcpkg.cmake" // Added vcpkg toolchain
+          },
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",
@@ -25,9 +26,11 @@
                 "value": "x64",
                 "strategy": "external"
             },
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
+          "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Debug",
+            "CMAKE_PREFIX_PATH": "C:\\libtorch",
+            "OpenCV_DIR": "C:\\libs\\opencv\\build\\x64\\vc16\\lib"
+          }
         },
         {
             "name": "x64-release",
@@ -45,17 +48,19 @@
                 "value": "x86",
                 "strategy": "external"
             },
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
+          "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Debug",
+            "CMAKE_PREFIX_PATH": "C:\\libs\\vcpkg\\installed\\x86-windows"
+          }
         },
         {
             "name": "x86-release",
             "displayName": "x86 Release",
             "inherits": "x86-debug",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
-            }
+          "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Release",
+            "CMAKE_PREFIX_PATH": "C:\\libs\\vcpkg\\installed\\x86-windows"
+          }
         },
         {
             "name": "linux-debug",
