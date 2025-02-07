@@ -19,4 +19,4 @@ Interl(R) UHD Graphics 630
 NVIDIA GeForce GTX 1050 Ti with Max-Q Design
  
 ### Important videos 
-- https://www.youtube.com/watch?v=6eTVqYGIWx0&t=27s  (seting up Visual studio wih libtorch)
+- https://www.youtube.com/watch?v=6eTVqYGIWx0&t=27s  (seting up Visual studio with libtorch)
