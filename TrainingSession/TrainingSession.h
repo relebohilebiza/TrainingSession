@@ -2,7 +2,7 @@
 // or project specific include files.
 
 #pragma once
-#include <torch/torch.h>
-#include <iostream>
+#include "commonHeaders.h"
+#include "tutorialOne.h"
 
 // TODO: Reference additional headers your program requires here.

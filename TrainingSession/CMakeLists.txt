@@ -24,7 +24,7 @@ include_directories(${OpenCV_DIR})
 # Add source to this project's executable.
 add_executable (TrainingSession "TrainingSession.cpp" 
 "TrainingSession.h"
-)
+ "tutorialOne.h" "commonHeaders.h" "tutorialOne.cpp")
 
 target_link_libraries(TrainingSession ${TORCH_LIBRARIES} ${OpenCV_LIBS} cpprestsdk::cpprest )
 
