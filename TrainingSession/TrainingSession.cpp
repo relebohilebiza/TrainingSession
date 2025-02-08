@@ -41,7 +41,7 @@ int main()
 
 	auto randIntTensor = torch::randint(0, 4,{2,2}); // randint takes the random integer value of min , max. A tensor with 2 rows and 2 colums, this code will create 2 x 2 tensor.
 	std::cout << "randint Tensor: \n" << randIntTensor << std::endl; //[[0 , 3], [1, 3]]
-
-
+	
+	//https://github.com/prabhuomkar/pytorch-cpp/blob/master/tutorials/basics/pytorch_basics/main.cpp
 	return 0;
 }
