@@ -10,10 +10,9 @@ int main()
 	tutorialOne tutOne; // run Tutorial One code
 
 
-
 	/* Examoles from https://github.com/prabhuomkar/pytorch-cpp/blob/master/tutorials/basics/pytorch_basics/main.cpp */
 
-	/* https://brunomaga.github.io/GPT-lite-cpp it explains Reshaping, stacking, squeezing and unsqueezing *
+	/* https://brunomaga.github.io/GPT-lite-cpp it explains Reshaping, stacking, squeezing and unsqueezing */
 
 	return 0;
 }
