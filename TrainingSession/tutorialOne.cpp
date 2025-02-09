@@ -85,7 +85,10 @@ void tutorialOne::runTutorialOne()
 	torch::Tensor fullTensorView = torch::full({10},3);
 	fullTensorView.view({1, 2, -1}); // Returns a new tensor with the same data as the self tensor but of a different shape. 
 	std::cout << "full tensor as norma:\n"  << fullTensorView << "change the shape but keep the values the same:\n" << fullTensorView.view({ 1, 2, -1 }) << "\n";
-
+	fullTensorView = fullTensorView.view({ 1, 2, -1 }); // Returns a new tensor with the same data as the self tensor but of a different shape.
+	auto transposeTensor = fullTensorView.transpose(0, 1); // Returns a tensor that is a transposed version of input. The given dimensions dim0 and dim1 are swapped.
+	//torch::transpose(fullTensorView, 0, 1);
+	std::cout << "transpose tensor:\n" << transposeTensor << "\n";
 	//squeeze and unspueeze
 
 
