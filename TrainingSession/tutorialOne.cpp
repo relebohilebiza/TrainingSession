@@ -78,4 +78,15 @@ void tutorialOne::runTutorialOne()
 
 	auto cloneTensor = firstTensor.clone(); // clone function completely copied firstTensor into a new tensor cloneTensor, the change of the original tensor firstTensor will not affect cloneTensor, which is called a deep copy.
 	std::cout << "clone tensor:\n" << cloneTensor << "\n";
+
+	/* ---------- Tensor defirmation ------------*/
+	std::cout << "-----------  Tensor defirmation  ------------------- \n";
+
+	torch::Tensor fullTensorView = torch::full({10},3);
+	fullTensorView.view({1, 2, -1}); // Returns a new tensor with the same data as the self tensor but of a different shape. 
+	std::cout << "full tensor as norma:\n"  << fullTensorView << "change the shape but keep the values the same:\n" << fullTensorView.view({ 1, 2, -1 }) << "\n";
+
+	//squeeze and unspueeze
+
+
 }
