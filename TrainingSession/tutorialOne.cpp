@@ -86,10 +86,21 @@ void tutorialOne::runTutorialOne()
 	fullTensorView.view({1, 2, -1}); // Returns a new tensor with the same data as the self tensor but of a different shape. 
 	std::cout << "full tensor as norma:\n"  << fullTensorView << "change the shape but keep the values the same:\n" << fullTensorView.view({ 1, 2, -1 }) << "\n";
 	fullTensorView = fullTensorView.view({ 1, 2, -1 }); // Returns a new tensor with the same data as the self tensor but of a different shape.
+	
 	auto transposeTensor = fullTensorView.transpose(0, 1); // Returns a tensor that is a transposed version of input. The given dimensions dim0 and dim1 are swapped.
 	//torch::transpose(fullTensorView, 0, 1);
 	std::cout << "transpose tensor:\n" << transposeTensor << "\n";
+
+	auto reshapeTensor = transposeTensor.reshape({ 1, 1,-1 }); // Returns a tensor with the same data and number of elements as input, but with the specified shape. When possible, the returned tensor will be a view of input
+	std::cout << "reshape tensor:\n" << reshapeTensor << "\n";
+
+	auto ftest = floatVectorToTensor.view({ 1, 1, -1 });
+	auto permutesTensor = ftest.permute({2, 0, 1}); // Returns a view of the original tensor input with its dimensions permuted. meaning swap the values 
+	std::cout << "permutes tensor:\n" << permutesTensor << "\n";
+	
+
 	//squeeze and unspueeze
 
+	
 
 }
