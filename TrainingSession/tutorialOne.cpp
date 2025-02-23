@@ -100,7 +100,4 @@ void tutorialOne::runTutorialOne()
 	
 
 	//squeeze and unspueeze
-
-	
-
 }
