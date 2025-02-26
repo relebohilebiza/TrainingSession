@@ -14,7 +14,7 @@ int main()
 
 	/* https://brunomaga.github.io/GPT-lite-cpp it explains Reshaping, stacking, squeezing and unsqueezing */
 
-	Two tutorialTwo;
+	Two tutorialTwo;  // used to run tutorial two
 
 	return 0;
 }

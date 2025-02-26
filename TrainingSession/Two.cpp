@@ -41,5 +41,7 @@ void Two::runTwo()
 	std::cout << " tensor dimension: " << tensorDimension.sizes() << " type: "<< tensorDimension .type()<< "\n";
 
 	auto tensorDimensionChange = tensorDimension.permute({ 2, 0, 1 }); // change the dimensions to 3, 640, 480 (channel, height, width)
-	std::cout << " tensor dimension change: " << tensorDimensionChange.sizes() << " type: " << tensorDimensionChange.type() << "\n";
+	std::cout << " tensor dimension change: " << tensorDimensionChange.sizes() << " type: " << tensorDimensionChange.type() <<"ndim: " << tensorDimensionChange.ndimension()<< "\n"; // ndimensions will return 3 
+
+
 }
